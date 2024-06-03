@@ -5,12 +5,12 @@ interface ConfigField {
   label: string;
 }
 
-interface CategoryConfig {
+export interface CategoryTypeConfig {
   name: ConfigField;
   order: ConfigField;
 }
 
-export const CategoryConfig: CategoryConfig = {
+export const CategoryConfig: CategoryTypeConfig = {
   name: {
     type: 'string',
     label: 'Name',

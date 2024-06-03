@@ -5,14 +5,14 @@ interface ConfigField {
   label: string;
 }
 
-interface ProductConfig {
+export interface ProductTypeConfig {
   name: ConfigField;
   size: ConfigField;
   price: ConfigField;
   available: ConfigField;
 }
 
-export const ProductConfig: ProductConfig = {
+export const ProductConfig: ProductTypeConfig = {
   name: {
     type: 'string',
     label: 'Name',

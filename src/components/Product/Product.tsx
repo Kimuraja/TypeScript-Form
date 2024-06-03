@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ProductConfig as product } from "../../config/ProductConfig";
+import { ProductConfig as product, ProductTypeConfig } from "../../config/ProductConfig";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { Button, Form, Input, InputNumber, Select, Switch } from "antd";
@@ -9,7 +9,7 @@ const Product: React.FC = () => {
   const { t } = useTranslation();
   const [formData] = Form.useForm();
 
-  const onFormSubmit = (values: any) => {
+  const onFormSubmit = (values: ProductTypeConfig) => {
     console.log("Form values:", values);
     formData.resetFields();
   };
