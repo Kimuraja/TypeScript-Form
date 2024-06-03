@@ -1,10 +1,11 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { CategoryConfig as category } from "../../config/CategoryConfig";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { Button, Form, Input, InputNumber } from "antd";
 
-export default function Category() {
+const Category: React.FC = () => {
   const { t } = useTranslation();
   const [formData] = Form.useForm();
 
@@ -15,7 +16,7 @@ export default function Category() {
 
   return (
     <>
-      <div className="language"> 
+      <div className="language">
         <LanguageSwitcher />
       </div>
       <section>
@@ -52,4 +53,6 @@ export default function Category() {
       </section>
     </>
   );
-}
+};
+
+export default Category;

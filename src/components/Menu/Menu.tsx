@@ -1,15 +1,16 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "antd";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import './Menu.css'
 
-export default function Menu() {
+const Menu: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <div>
-      <div className="language"> 
+      <div className="language">
         <LanguageSwitcher />
       </div>
       <section className="container">
@@ -28,4 +29,6 @@ export default function Menu() {
       </section>
     </div>
   );
-}
+};
+
+export default Menu;

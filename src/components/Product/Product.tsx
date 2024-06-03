@@ -1,10 +1,11 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { ProductConfig as product } from "../../config/ProductConfig";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { Button, Form, Input, InputNumber, Select, Switch } from "antd";
 
-export default function Product() {
+const Product: React.FC = () => {
   const { t } = useTranslation();
   const [formData] = Form.useForm();
 
@@ -15,8 +16,8 @@ export default function Product() {
 
   return (
     <>
-      <div className="language"> 
-          <LanguageSwitcher />
+      <div className="language">
+        <LanguageSwitcher />
       </div>
 
       <section>
@@ -45,7 +46,7 @@ export default function Product() {
               required
             />
           </Form.Item>
-          <Form.Item label={t("Available")} name="avaiable" valuePropName="checked">
+          <Form.Item label={t("Available")} name="available" valuePropName="checked">
             <Switch />
           </Form.Item>
           <Form.Item>
@@ -57,7 +58,9 @@ export default function Product() {
             <Button>{t("Home")}</Button>
           </Link>
         </Form>
-    </section>
+      </section>
     </>
   );
-}
+};
+
+export default Product;
