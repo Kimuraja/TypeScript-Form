@@ -6,11 +6,11 @@ import { Button, Form, Input, InputNumber, Select, Switch } from "antd";
 
 export default function Product() {
   const { t } = useTranslation();
-  const [form] = Form.useForm();
+  const [formData] = Form.useForm();
 
   const onFormSubmit = (values: any) => {
     console.log("Form values:", values);
-    form.resetFields();
+    formData.resetFields();
   };
 
   return (
@@ -21,7 +21,7 @@ export default function Product() {
 
       <section>
         <h1>{t('Product')}</h1>
-        <Form form={form} onFinish={onFormSubmit}>
+        <Form form={formData} onFinish={onFormSubmit}>
           <Form.Item label={t("Name")} name="name">
             <Input placeholder={t("Name")} type={product.name.type} required />
           </Form.Item>

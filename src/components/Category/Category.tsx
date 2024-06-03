@@ -6,11 +6,11 @@ import { Button, Form, Input, InputNumber } from "antd";
 
 export default function Category() {
   const { t } = useTranslation();
-  const [form] = Form.useForm();
+  const [formData] = Form.useForm();
 
-  const onFinish = (values: any) => {
+  const onFormSubmit = (values: any) => {
     console.log("Form values:", values);
-    form.resetFields();
+    formData.resetFields();
   };
 
   return (
@@ -20,7 +20,7 @@ export default function Category() {
       </div>
       <section>
         <h1>{t('Category')}</h1>
-        <Form form={form} onFinish={onFinish} className="form">
+        <Form form={formData} onFinish={onFormSubmit} className="form">
           <Form.Item label={t("Name")} name="name" className="form__item">
             <Input
               placeholder={t("Name")}
