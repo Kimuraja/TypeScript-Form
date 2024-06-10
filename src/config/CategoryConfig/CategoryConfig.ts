@@ -1,4 +1,4 @@
-import FormConfig from '../FormConfig';
+import FormConfig from '../Interfaces';
 
 
 export const CategoryConfig: FormConfig[] = [

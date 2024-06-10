@@ -2,10 +2,10 @@ import React from 'react';
 import { Form, Button } from 'antd';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import FormConfig from '../../config/FormConfig';
+import FormConfig from '../../config/Interfaces';
 import Input from '../FormInputs/Input';
-import SelectForm from '../FormInputs/Select';
-import CheckboxInput from '../FormInputs/Checkbox';
+import Select from '../FormInputs/Select';
+import Checkbox from '../FormInputs/Checkbox';
 
 
 interface Render {
@@ -46,7 +46,7 @@ const DynamicForm: React.FC<Render> = ({ config }) => {
         );
       case 'choice':
         return (
-          <SelectForm
+          <Select
             placeholder={t(configField.label)}
             label={t(configField.label)}
             name={configField.label}
@@ -56,7 +56,7 @@ const DynamicForm: React.FC<Render> = ({ config }) => {
         );
       case 'bool':
         return (
-          <CheckboxInput
+          <Checkbox
             label={t(configField.label)}
             name={configField.label}
             key={configField.label}

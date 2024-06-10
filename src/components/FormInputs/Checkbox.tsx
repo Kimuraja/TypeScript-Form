@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Checkbox } from "antd";
+import { Form, Checkbox as AntdCheckbox } from "antd";
 
 
 interface CheckboxProps {
@@ -8,7 +8,7 @@ interface CheckboxProps {
 }
 
 
-const CheckboxInput: React.FC<CheckboxProps> = ({label, name}) => {
+const Checkbox: React.FC<CheckboxProps> = ({label, name}) => {
   return (
     <Form.Item
       label={label}
@@ -16,9 +16,9 @@ const CheckboxInput: React.FC<CheckboxProps> = ({label, name}) => {
       valuePropName="checked"
       initialValue={false} 
     >
-      <Checkbox />
+      <AntdCheckbox />
     </Form.Item>
   );
 };
 
-export default CheckboxInput;
+export default Checkbox;

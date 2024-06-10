@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Select } from "antd";
+import { Form, Select as AntdSelect} from "antd";
 import { useTranslation } from "react-i18next";
 
 interface SelectFormProps {
@@ -9,19 +9,19 @@ interface SelectFormProps {
   options?: string[];
 }
 
-const SelectForm: React.FC<SelectFormProps> = ({ placeholder, label, name, options }) => {
+const Select: React.FC<SelectFormProps> = ({ placeholder, label, name, options }) => {
   const { t } = useTranslation();
   return (
     <Form.Item label={label} name={name}>
-      <Select placeholder={placeholder}>
+      <AntdSelect placeholder={placeholder}>
         {options ? options.map((value: string) => (
-          <Select.Option value={value} key={value}>
+          <AntdSelect.Option value={value} key={value}>
             {t(value)}
-          </Select.Option>
+          </AntdSelect.Option>
         )) : null}
-      </Select>
+      </AntdSelect>
     </Form.Item>
   );
 };
 
-export default SelectForm;
+export default Select;
