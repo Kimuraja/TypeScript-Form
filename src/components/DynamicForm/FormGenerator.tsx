@@ -2,10 +2,10 @@ import React from 'react';
 import { Form, Button } from 'antd';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import FormConfig from '../../config/Interfaces';
-import Input from '../FormInputs/Input';
-import Select from '../FormInputs/Select';
-import Checkbox from '../FormInputs/Checkbox';
+import FormConfig from '../../config/FormConfig';
+import Input from '../Inputs/Input';
+import Select from '../Inputs/Select';
+import Checkbox from '../Inputs/Checkbox';
 
 
 interface Render {
