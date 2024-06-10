@@ -10,7 +10,7 @@ interface InputFormProps {
 }
 
 
-const InputForm: React.FC<InputFormProps> = ({ placeholder, label, name, type}) => {
+const Input: React.FC<InputFormProps> = ({ placeholder, label, name, type}) => {
   return (
     <Form.Item label={label} name={name} key={name}>
       <AntdInput placeholder={placeholder} type={type}/>
@@ -18,4 +18,4 @@ const InputForm: React.FC<InputFormProps> = ({ placeholder, label, name, type}) 
   );
 };
 
-export default InputForm;
+export default Input;

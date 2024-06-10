@@ -2,8 +2,8 @@ import React from 'react';
 import { Form, Button } from 'antd';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import FormConfig from '../../config/Interfaces';
-import InputForm from '../FormInputs/Input';
+import FormConfig from '../../config/FormConfig';
+import Input from '../FormInputs/Input';
 import SelectForm from '../FormInputs/Select';
 import CheckboxInput from '../FormInputs/Checkbox';
 
@@ -26,7 +26,7 @@ const DynamicForm: React.FC<Render> = ({ config }) => {
     switch (configField.type) {
       case 'string':
         return (
-          <InputForm
+          <Input
             placeholder={t(configField.label)}
             label={t(configField.label)}
             name={configField.label}
@@ -36,7 +36,7 @@ const DynamicForm: React.FC<Render> = ({ config }) => {
         );
       case 'number':
         return (
-          <InputForm
+          <Input
             placeholder={t(configField.label)}
             label={t(configField.label)}
             name={configField.label}

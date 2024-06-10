@@ -1,4 +1,4 @@
-import FormConfig from '../Interfaces';
+import FormConfig from '../FormConfig';
 
 
 export const ProductConfig: FormConfig[] = [
