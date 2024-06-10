@@ -1,5 +1,5 @@
 import React from 'react';
-import { CategoryConfig } from '../../config/ConfigArray';
+import { CategoryConfig } from '../../config/CategoryConfig/CategoryConfig';
 import DynamicForm from '../DynamicForm/FormGenerator';
 import { useTranslation } from "react-i18next";
 
@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const Category: React.FC = () => {
   const { t } = useTranslation();
 
-  
+
   return (
     <section>
       <h1>{t('category')}</h1>

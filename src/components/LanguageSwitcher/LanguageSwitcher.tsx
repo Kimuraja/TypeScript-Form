@@ -9,7 +9,7 @@ const LanguageSwitcher: React.FC = () => {
     i18n.changeLanguage(lng);
   };
 
-  
+
   return (
     <Radio.Group>
       <Radio.Button value="start" onClick={() => changeLanguage("pl")}>

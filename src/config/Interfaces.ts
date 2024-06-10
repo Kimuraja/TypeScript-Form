@@ -1,6 +1,6 @@
 type ConfigType = 'string' | 'choice' | 'number' | 'bool';
 
-export default interface ConfigArray {
+export default interface FormConfig {
   type: ConfigType;
   label: string;
   options?: string[];

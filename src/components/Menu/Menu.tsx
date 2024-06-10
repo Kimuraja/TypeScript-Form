@@ -8,7 +8,7 @@ import './Menu.css'
 const Menu: React.FC = () => {
   const { t } = useTranslation();
 
-  
+
   return (
     <div>
       <section className="container">

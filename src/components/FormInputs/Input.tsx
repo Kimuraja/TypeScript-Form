@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input } from "antd";
+import { Form, Input as AntdInput } from "antd";
 
 
 interface InputFormProps {
@@ -13,7 +13,7 @@ interface InputFormProps {
 const InputForm: React.FC<InputFormProps> = ({ placeholder, label, name, type}) => {
   return (
     <Form.Item label={label} name={name} key={name}>
-      <Input placeholder={placeholder} type={type}/>
+      <AntdInput placeholder={placeholder} type={type}/>
     </Form.Item>
   );
 };

@@ -1,7 +1,7 @@
-import ConfigArray from './Interfaces';
+import FormConfig from '../Interfaces';
 
 
-export const ProductConfig: ConfigArray[] = [
+export const ProductConfig: FormConfig[] = [
   {
     type: 'string',
     label: 'name',
@@ -18,16 +18,5 @@ export const ProductConfig: ConfigArray[] = [
   {
     type: 'bool',
     label: 'available',
-  },
-];
-
-export const CategoryConfig: ConfigArray[] = [
-  {
-    type: 'string',
-    label: 'name',
-  },
-  {
-    type: 'number',
-    label: 'order',
   },
 ];

@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Menu from './components/Menu/Menu';
-import Category from './components/Forms/Category';
-import Product from './components/Forms/Product';
+import Menu from './components/Menu/Menu'
+import Category from './components/Forms/CategoryForm';
+import Product from './components/Forms/ProductForm';
 import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher';
 import './App.css'
 import './i18n';

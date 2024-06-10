@@ -2,14 +2,12 @@ import React from "react";
 import { Form, Select } from "antd";
 import { useTranslation } from "react-i18next";
 
-
 interface SelectFormProps {
   placeholder: string;
   label: string;
   name: string;
   options?: string[];
 }
-
 
 const SelectForm: React.FC<SelectFormProps> = ({ placeholder, label, name, options }) => {
   const { t } = useTranslation();
