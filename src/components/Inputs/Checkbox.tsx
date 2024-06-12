@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Checkbox as AntdCheckbox } from "antd";
 
 
-interface CheckboxProps {
+type CheckboxProps = {
   label: string | number;
   name: string;
 }

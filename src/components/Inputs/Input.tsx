@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Input as AntdInput } from "antd";
 
 
-interface InputFormProps {
+type InputFormProps = {
   placeholder: string;
   label: string;
   name: string | number;

@@ -2,7 +2,8 @@ import React from "react";
 import { Form, Select as AntdSelect} from "antd";
 import { useTranslation } from "react-i18next";
 
-interface SelectFormProps {
+
+type SelectFormProps = {
   placeholder: string;
   label: string;
   name: string;
